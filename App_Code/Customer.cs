@@ -5,8 +5,10 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// Summary description for Customer
+/// Gets and sets customer information.
 /// </summary>
+/// <author>Kathryn Browning</author>
+/// <version>February 3, 2015</version>
 public class Customer
 {
     private string _customerID;
@@ -18,6 +20,12 @@ public class Customer
     private string _phone;
     private string _email;
 
+    /// <summary>
+    /// Gets or sets the costumer identifier.
+    /// </summary>
+    /// <value>
+    /// The costumer identifier.
+    /// </value>
     public string CostumerId
     {
         get {return this._customerID}
@@ -28,6 +36,12 @@ public class Customer
         }
     }
 
+    /// <summary>
+    /// Gets or sets the name.
+    /// </summary>
+    /// <value>
+    /// The name of the customer.
+    /// </value>
     public string Name
     {
         get { return this._name; }
@@ -38,6 +52,12 @@ public class Customer
         }
     }
 
+    /// <summary>
+    /// Gets or sets the address.
+    /// </summary>
+    /// <value>
+    /// The address of the customer.
+    /// </value>
     public string Address
     {
         get { return this._address; }
@@ -48,6 +68,12 @@ public class Customer
         }
     }
 
+    /// <summary>
+    /// Gets or sets the city.
+    /// </summary>
+    /// <value>
+    /// The city where the customer lives.
+    /// </value>
     public string City
     {
         get { return this._city; }
@@ -58,6 +84,12 @@ public class Customer
         }
     }
 
+    /// <summary>
+    /// Gets or sets the state.
+    /// </summary>
+    /// <value>
+    /// The state where the customer lives.
+    /// </value>
     public string State
     {
         get { return this._state; }
@@ -68,6 +100,12 @@ public class Customer
         }
    }
 
+    /// <summary>
+    /// Gets or sets the zipcode.
+    /// </summary>
+    /// <value>
+    /// The zipcode of the customer.
+    /// </value>
     public string Zipcode
     {
         get { return this._zipcode; }
@@ -78,6 +116,12 @@ public class Customer
         }
     }
 
+    /// <summary>
+    /// Gets or sets the phone.
+    /// </summary>
+    /// <value>
+    /// The phone number of the customer.
+    /// </value>
     public string Phone
     {
         get { return this._phone; }
@@ -88,6 +132,12 @@ public class Customer
         }
     }
 
+    /// <summary>
+    /// Gets or sets the email.
+    /// </summary>
+    /// <value>
+    /// The email of the customer.
+    /// </value>
     public string Email
     {
         get { return this._email; }
