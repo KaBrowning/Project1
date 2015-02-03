@@ -33,7 +33,7 @@ public class Customer
         get { return this._name; }
         set
         {
-            Trace.Assert(value != null, "Invalid Customer Name");
+            Trace.Assert(value != null, "Invalid Name");
             this._name = value;
         }
     }
@@ -43,7 +43,7 @@ public class Customer
         get { return this._address; }
         set
         {
-            Trace.Assert(value != null, "Invalid Customer Address");
+            Trace.Assert(value != null, "Invalid Address");
             this._address = value;
         }
     }
@@ -53,9 +53,48 @@ public class Customer
         get { return this._city; }
         set
         {
-            Trace.Assert(value != null, "Invalid Customer City");
+            Trace.Assert(value != null, "Invalid City");
             this._city = value;
         }
+    }
 
+    public string State
+    {
+        get { return this._state; }
+        set
+        {
+            Trace.Assert(value != null, "Invalid State");
+            this._state = value;
+        }
+   }
+
+    public string Zipcode
+    {
+        get { return this._zipcode; }
+        set
+        {
+            Trace.Assert(value != null, "Invalid Zipcode");
+            this._zipcode= value;
+        }
+    }
+
+    public string Phone
+    {
+        get { return this._phone; }
+        set
+        {
+            Trace.Assert(value != null, "Invalid Phone Number");
+            this._phone = value;
+        }
+    }
+
+    public string Email
+    {
+        get { return this._email; }
+        set
+        {
+            Trace.Assert(value != null, "Invalid Email");
+            this._email = value;
+        }
     }
 }
