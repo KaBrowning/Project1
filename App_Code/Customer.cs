@@ -28,7 +28,7 @@ public class Customer
     /// </value>
     public string CostumerId
     {
-        get {return this._customerID}
+        get { return this._customerID; }
         set
         {
             Trace.Assert(value != null, "Invalid Customer ID");

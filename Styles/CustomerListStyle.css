@@ -3,16 +3,12 @@
     font-family: Arial, Verdana, sans-serif
 }
 
-header {
-    /**background: -webkit-linear-gradient(white, );
-    background: -o-linear-gradient(white, black);
-    background: -moz-linear-gradient(white, black);
-    background: linear-gradient(white, black);**/ 
-    border-bottom: 3px solid black;
+ body header {
+    background-color:dimgray;
 }
 
 h1 {
-    color: royalblue;
+    color: oldlace;
     }
 
 h2 {
