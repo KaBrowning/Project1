@@ -13,6 +13,7 @@
         <h2>"Managing Ballgames with Technology"</h2>
     </header>
     
+    <div id ="wrapper">
     <nav>
         <a href ="CustomerList.aspx">Home</a>
     </nav>
@@ -28,5 +29,7 @@
             FROM [Customer] ORDER BY [CustomerID]"></asp:SqlDataSource>
 
     </form>
+        
+        </div>
 </body>
 </html>
