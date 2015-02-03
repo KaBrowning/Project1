@@ -8,6 +8,10 @@
     <link href="Styles/CustomerListStyle.css" rel="stylesheet"/>
 </head>
 <body>
+    <header>
+        <h1>Digital Upscale Manager for Ballgames</h1>
+        <h2>"Managing Ballgames with Technology"</h2>
+    </header>
     <form id="form1" runat="server">
     <div>
     
