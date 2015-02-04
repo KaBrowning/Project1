@@ -11,4 +11,11 @@ public partial class ContactList : Page
             CustomerList.GetCustomers();
         }
     }
+    protected void btnClear_Click(object sender, EventArgs e)
+    {
+        if (!IsValid)
+        {
+            return;
+        }
+    }
 }

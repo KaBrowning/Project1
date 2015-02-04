@@ -19,10 +19,23 @@
         <a href ="ContactList.aspx">View Contact List</a>
         <a href ="CustomerFeedback.aspx">Feedback</a>
     </nav>
+
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+        <asp:ListBox ID="lstCustomerContact" runat="server" SelectionMode="Single">
+        </asp:ListBox>
+        
+        
+
+        <br />
+        <br />
+        <asp:Button ID="btnSelectMore" runat="server" Text="Select Additional Customers" />
+        <br />
+        <asp:Button ID="btnRemove" runat="server" Text="Remove Customer" />
+        <br />
+        <asp:Button ID="btnClear" runat="server" Text="Clear List" />
+        
+        
+
     </form>
     </div>
 </body>
