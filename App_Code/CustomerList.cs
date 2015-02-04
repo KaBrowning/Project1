@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Activities.Debugger;
+using System.Activities.Statements;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Web;
 
 /// <summary>
@@ -23,17 +26,28 @@ public class CustomerList
         set
         {
             Trace.Assert(true, "Invalid customer selection");
-            this._customerList[index];
+            this._customerList.FindIndex(index);
         }
     }
 
+    /// <summary>
+    /// Gets the <see cref="Customer"/> with the specified name.
+    /// </summary>
+    /// <value>
+    /// The <see cref="Customer"/>.
+    /// </value>
+    /// <param name="name">The name.</param>
+    /// <returns></returns>
     public Customer this[String name]
     {
         get
         {
-            if ()
+            foreach (Customer aCustomer in this._customerList)
             {
-                
+                if (aCustomer.Name == name)
+                {
+                    return aCustomer;
+                }
             }
          }
     }
@@ -73,9 +87,17 @@ public class CustomerList
         this._customerList.Clear();
     }
 
+    /// <summary>
+    /// Gets the customers that are stored in the session state.
+    /// </summary>
+    /// <returns></returns>
     public static CustomerList GetCustomers()
     {
-        
+        if ( == null)
+        {
+            HttpContext.Current.Session["Customers"] = new Customer();
+        }
+        SortedList customers = (SortedList) HttpContext.Current.Session["Customers"];
     }
 
 }
