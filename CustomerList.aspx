@@ -16,11 +16,13 @@
     <div id ="wrapper">
     <nav>
         <a href ="CustomerList.aspx">Home</a>
+        <a href ="ContactList.aspx">View Contact List</a>
+        <a href ="CustomerFeedback.aspx">Feedback</a>
     </nav>
 
     <form id="form1" runat="server">
         
-        <h3>Please select a player to view their information</h3>
+        <h3>Please select a customer to view their information</h3>
         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" 
             DataValueField="CustomerID"></asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CustomerConnectionString %>" 
