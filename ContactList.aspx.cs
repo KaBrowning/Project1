@@ -7,6 +7,8 @@ public partial class ContactList : Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        this._customerList = new CustomerList();
+
         if (!IsPostBack)
         {
             CustomerList.GetCustomers();
@@ -20,5 +22,13 @@ public partial class ContactList : Page
             return;
         }
         this._customerList.Clear();
+    }
+
+    protected void btnRemove_Click(object sender, EventArgs e)
+    {
+        if (!IsValid)
+        {
+            return;
+        }
     }
 }
