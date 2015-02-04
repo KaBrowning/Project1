@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Web;
 
 /// <summary>
@@ -84,16 +85,17 @@ public class CustomerList
     }
 
     /// <summary>
-    /// Gets the customers that are stored in the session state.
+    /// Gets the list of customers that are stored in the session state.
     /// </summary>
     /// <returns></returns>
     public static CustomerList GetCustomers()
     {
-        if ( == null)
+        CustomerList cList = (CustomerList) HttpContext.Current.Session["Customer"];
+        if (cList == null)
         {
-            HttpContext.Current.Session["Customers"] = new Customer();
+            HttpContext.Current.Session["Customer"] = new CustomerList();
+            return (CustomerList) HttpContext.Current.Session["Customer"];
         }
-        SortedList customers = (SortedList) HttpContext.Current.Session["Customers"];
     }
 
 }
