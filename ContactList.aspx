@@ -32,7 +32,7 @@
         <br />
         <asp:Button ID="btnRemove" runat="server" Text="Remove Customer" />
         <br />
-        <asp:Button ID="btnClear" runat="server" Text="Clear List" />
+        <asp:Button ID="btnClear" runat="server" Text="Clear List" OnClick="btnClear_Click" />
         
         
 
