@@ -8,7 +8,7 @@ using System.Web;
 /// </summary>
 public class CustomerList
 {
-    private List<Customer> _customerList;
+    private readonly List<Customer> _customerList;
  
 	public CustomerList()
 	{
@@ -37,7 +37,7 @@ public class CustomerList
     {
         get
         { 
-            foreach (Customer aCustomer in this._customerList)
+            foreach (var aCustomer in this._customerList)
             {
                 if (aCustomer.Name == name)
                 {
@@ -89,10 +89,10 @@ public class CustomerList
     /// <returns></returns>
     public static CustomerList GetCustomers()
     {
-        CustomerList cList = (CustomerList) HttpContext.Current.Session["Customer"];
+        var cList = (CustomerList)HttpContext.Current.Session["Customer"];
         if (cList == null)
             HttpContext.Current.Session["Customer"] = new CustomerList();
-            return (CustomerList) HttpContext.Current.Session["Customer"];
+        return (CustomerList)HttpContext.Current.Session["Customer"];
     }
 
 }
