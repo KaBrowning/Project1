@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Activities.Debugger;
-using System.Activities.Statements;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Web;
 
 /// <summary>
@@ -26,7 +22,7 @@ public class CustomerList
         set
         {
             Trace.Assert(true, "Invalid customer selection");
-            this._customerList.FindIndex(index);
+            value = this._customerList[index];
         }
     }
 
