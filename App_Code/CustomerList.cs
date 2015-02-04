@@ -21,7 +21,7 @@ public class CustomerList
         set
         {
             Trace.Assert(true, "Invalid customer selection");
-            value = this._customerList[index];
+            this._customerList[index] = value;
         }
     }
 

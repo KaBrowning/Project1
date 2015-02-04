@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
+﻿using System.Diagnostics;
 
 /// <summary>
 /// Gets and sets customer information.
@@ -11,7 +7,7 @@ using System.Web;
 /// <version>February 3, 2015</version>
 public class Customer
 {
-    private string _customerID;
+    private string _customerId;
     private string _name;
     private string _address;
     private string _city;
@@ -28,11 +24,11 @@ public class Customer
     /// </value>
     public string CostumerId
     {
-        get { return this._customerID; }
+        get { return this._customerId; }
         set
         {
             Trace.Assert(value != null, "Invalid Customer ID");
-            this._customerID = value;
+            this._customerId = value;
         }
     }
 

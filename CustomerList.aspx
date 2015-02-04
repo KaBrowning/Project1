@@ -23,15 +23,18 @@
     <form id="form1" runat="server">
         
         <h3>Please select a customer to view their information</h3>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" 
-            DataValueField="CustomerID"></asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CustomerConnectionString %>" 
+        <asp:DropDownList ID="ddlCustomers" runat="server" DataSourceID="SqlDataSource" DataTextField="Name" 
+            AppendDataBoundItems="True" DataValueField="CustomerID" OnSelectedIndexChanged="ddlCustomers_SelectedIndexChanged" >
+            <asp:ListItem>Please Select One</asp:ListItem>
+        </asp:DropDownList>
+        
+        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:CustomerConnectionString %>" 
             ProviderName="<%$ ConnectionStrings:CustomerConnectionString.ProviderName %>" 
             SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] 
             FROM [Customer] ORDER BY [CustomerID]"></asp:SqlDataSource>
-
+        
     </form>
         
-        </div>
+   </div>
 </body>
 </html>
