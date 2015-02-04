@@ -43,16 +43,27 @@ public class CustomerList
         
     }
 
+    /// <summary>
+    /// Adds a customer to the list.
+    /// </summary>
+    /// <param name="newCustomer">The new customer.</param>
     public void AddItem(Customer newCustomer)
     {
         this._customerList.Add(newCustomer);
     }
 
+    /// <summary>
+    /// Removes customer at specified index.
+    /// </summary>
+    /// <param name="index">The index.</param>
     public void RemoveAt(int index)
     {
        this._customerList.RemoveAt(index);
     }
 
+    /// <summary>
+    /// Clears this list of customers.
+    /// </summary>
     public void Clear()
     {
         this._customerList.Clear();
