@@ -28,11 +28,9 @@
 
         <br />
         <br />
-        <asp:Button ID="btnSelectMore" runat="server" Text="Select Additional Customers" />
-        <br />
-        <asp:Button ID="btnRemove" runat="server" Text="Remove Customer" />
-        <br />
-        <asp:Button ID="btnClear" runat="server" Text="Clear List" OnClick="btnClear_Click" />
+        <asp:Button ID="btnSelectMore" runat="server" Text="Select Additional Customers" CssClass="button"/>
+        <asp:Button ID="btnRemove" runat="server" Text="Remove Customer" CssClass="button"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear List" OnClick="btnClear_Click" CssClass="button"/>
         
         
 

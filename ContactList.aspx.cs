@@ -3,7 +3,7 @@ using System.Web.UI;
 
 public partial class ContactList : Page
 {
-    private ContactList _contactList;
+    private CustomerList _customerList;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -12,11 +12,13 @@ public partial class ContactList : Page
             CustomerList.GetCustomers();
         }
     }
+
     protected void btnClear_Click(object sender, EventArgs e)
     {
         if (!IsValid)
         {
             return;
         }
+        this._customerList.Clear();
     }
 }
