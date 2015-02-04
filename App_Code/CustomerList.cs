@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Web;
 
 /// <summary>
@@ -15,7 +13,7 @@ public class CustomerList
 	public CustomerList()
 	{
         this._customerList = new List<Customer>();
-    }
+	}
 
     public Customer this[int index]
     {
@@ -38,7 +36,7 @@ public class CustomerList
     public Customer this[String name]
     {
         get
-        {
+        { 
             foreach (Customer aCustomer in this._customerList)
             {
                 if (aCustomer.Name == name)
@@ -46,7 +44,8 @@ public class CustomerList
                     return aCustomer;
                 }
             }
-         }
+            return null;
+        }
     }
 
     /// <summary>
@@ -92,10 +91,8 @@ public class CustomerList
     {
         CustomerList cList = (CustomerList) HttpContext.Current.Session["Customer"];
         if (cList == null)
-        {
             HttpContext.Current.Session["Customer"] = new CustomerList();
             return (CustomerList) HttpContext.Current.Session["Customer"];
-        }
     }
 
 }
