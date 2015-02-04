@@ -8,10 +8,21 @@ using System.Web;
 /// </summary>
 public class ContactList
 {
+    private CustomerList _customerList;
 	public ContactList()
 	{
-		//
-		// TODO: Add constructor logic here
-		//
+       this._customerList = new CustomerList();
 	}
+
+    public void ViewContactList()
+    {
+        CustomerList.GetCustomers();
+    }
+
+    public void ClearList()
+    {
+        this._customerList.Clear();
+    }
+
+
 }
