@@ -38,9 +38,13 @@ public class CustomerList
          }
     }
 
+    /// <summary>
+    /// Counts this instance.
+    /// </summary>
+    /// <returns></returns>
     public int Count()
     {
-        
+        return this._customerList.Count;
     }
 
     /// <summary>
