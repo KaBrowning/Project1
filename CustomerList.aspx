@@ -32,7 +32,8 @@
             ProviderName="<%$ ConnectionStrings:CustomerConnectionString.ProviderName %>" 
             SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] 
             FROM [Customer] ORDER BY [CustomerID]"></asp:SqlDataSource>
-        
+        <br/>
+        <br/>
         <label>Customer ID: </label>
         <asp:Label ID="lblCustomerID" runat="server"></asp:Label>
         <br/>

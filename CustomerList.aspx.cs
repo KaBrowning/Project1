@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 
 public partial class CustomerList : Page
 {
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -11,19 +13,36 @@ public partial class CustomerList : Page
 
     protected void ddlCustomers_SelectedIndexChanged(object sender, EventArgs e)
     {
+        App_Code.CustomerList customers = new App_Code.CustomerList();
+        App_Code.Customer customer = customers[ddlCustomers.SelectedValue];
 
+        if (customer != null)
+        {
+            this.lblPhone.Text = customer.Phone;
+
+
+        }
+
+        this.ddlCustomers.Items[0].Text = this.lblFirstName.Text;
+        this.lblLastName.Text = this.ddlCustomers.SelectedValue;
+        this.lblAddress.Text = this.ddlCustomers.SelectedValue;
+        this.lblCity.Text = this.ddlCustomers.SelectedValue;
+        this.lblState.Text = this.ddlCustomers.SelectedValue;
+        this.lblZipcode.Text = this.ddlCustomers.SelectedValue;
+        this.lblPhone.Text = this.ddlCustomers.SelectedValue;
+        this.lblEmail.Text = this.ddlCustomers.SelectedValue;
     }
 
-    /// <summary>
-    /// Gets the list of customers.
-    /// </summary>
-    /// <returns></returns>
-    public static CustomerList GetCustomers()
-    {
-        var cList = (CustomerList)HttpContext.Current.Session["Customer"];
-        if (cList == null)
-            HttpContext.Current.Session["Customer"] = new CustomerList();
-        return (CustomerList)HttpContext.Current.Session["Customer"];
-    }
+    ///// <summary>
+    ///// Gets the list of customers.
+    ///// </summary>
+    ///// <returns></returns>
+    //public static CustomerList GetCustomers()
+    //{
+    //    var cList = (CustomerList)HttpContext.Current.Session["Customer"];
+    //    if (cList == null)
+    //        HttpContext.Current.Session["Customer"] = new CustomerList();
+    //    return (CustomerList)HttpContext.Current.Session["Customer"];
+    //}
 
 }

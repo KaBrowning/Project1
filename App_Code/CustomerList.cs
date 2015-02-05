@@ -3,96 +3,100 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Web;
 
-/// <summary>
-/// Summary description for CustomerList
-/// </summary>
-public class CustomerList
+namespace App_Code
 {
-    private readonly List<Customer> _customerList;
- 
-	public CustomerList()
-	{
-        this._customerList = new List<Customer>();
-	}
 
-    public Customer this[int index]
+    /// <summary>
+    /// Summary description for CustomerList
+    /// </summary>
+    public class CustomerList
     {
-        get { return this._customerList[index]; }
-        set
+        private readonly List<Customer> _customerList;
+
+        public CustomerList()
         {
-            Trace.Assert(true, "Invalid customer selection");
-            this._customerList[index] = value;
+            this._customerList = new List<Customer>();
         }
-    }
 
-    /// <summary>
-    /// Gets the <see cref="Customer"/> with the specified name.
-    /// </summary>
-    /// <value>
-    /// The <see cref="Customer"/>.
-    /// </value>
-    /// <param name="name">The name.</param>
-    /// <returns></returns>
-    public Customer this[String name]
-    {
-        get
-        { 
-            foreach (var aCustomer in this._customerList)
+        public Customer this[int index]
+        {
+            get { return this._customerList[index]; }
+            set
             {
-                if (aCustomer.Name == name)
-                {
-                    return aCustomer;
-                }
+                Trace.Assert(true, "Invalid customer selection");
+                this._customerList[index] = value;
             }
-            return null;
         }
-    }
 
-    /// <summary>
-    /// Counts this instance.
-    /// </summary>
-    /// <returns></returns>
-    public int Count()
-    {
-        return this._customerList.Count;
-    }
+        /// <summary>
+        /// Gets the <see cref="Customer"/> with the specified name.
+        /// </summary>
+        /// <value>
+        /// The <see cref="Customer"/>.
+        /// </value>
+        /// <param name="name">The name.</param>
+        /// <returns></returns>
+        public Customer this[String name]
+        {
+            get
+            {
+                foreach (var aCustomer in this._customerList)
+                {
+                    if (aCustomer.Name == name)
+                    {
+                        return aCustomer;
+                    }
+                }
+                return null;
+            }
+        }
 
-    /// <summary>
-    /// Adds a customer to the list.
-    /// </summary>
-    /// <param name="newCustomer">The new customer.</param>
-    public void AddItem(Customer newCustomer)
-    {
-        this._customerList.Add(newCustomer);
-    }
+        /// <summary>
+        /// Counts this instance.
+        /// </summary>
+        /// <returns></returns>
+        public int Count()
+        {
+            return this._customerList.Count;
+        }
 
-    /// <summary>
-    /// Removes customer at specified index.
-    /// </summary>
-    /// <param name="index">The index.</param>
-    public void RemoveAt(int index)
-    {
-       this._customerList.RemoveAt(index);
-    }
+        /// <summary>
+        /// Adds a customer to the list.
+        /// </summary>
+        /// <param name="newCustomer">The new customer.</param>
+        public void AddItem(Customer newCustomer)
+        {
+            this._customerList.Add(newCustomer);
+        }
 
-    /// <summary>
-    /// Clears this list of customers.
-    /// </summary>
-    public void Clear()
-    {
-        this._customerList.Clear();
-    }
+        /// <summary>
+        /// Removes customer at specified index.
+        /// </summary>
+        /// <param name="index">The index.</param>
+        public void RemoveAt(int index)
+        {
+            this._customerList.RemoveAt(index);
+        }
 
-    /// <summary>
-    /// Gets the list of customers that are stored in the session state.
-    /// </summary>
-    /// <returns></returns>
-    public static CustomerList GetCustomers()
-    {
-        var cList = (CustomerList)HttpContext.Current.Session["Customer"];
-        if (cList == null)
-            HttpContext.Current.Session["Customer"] = new CustomerList();
-        return (CustomerList)HttpContext.Current.Session["Customer"];
-    }
+        /// <summary>
+        /// Clears this list of customers.
+        /// </summary>
+        public void Clear()
+        {
+            this._customerList.Clear();
+        }
 
+        /// <summary>
+        /// Gets the list of customers that are stored in the session state.
+        /// </summary>
+        /// <returns></returns>
+        public static CustomerList GetCustomers()
+        {
+            var cList = (CustomerList) HttpContext.Current.Session["Customer"];
+            if (cList == null)
+                HttpContext.Current.Session["Customer"] = new CustomerList();
+            return (CustomerList) HttpContext.Current.Session["Customer"];
+        }
+
+    }
 }
