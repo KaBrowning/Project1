@@ -21,11 +21,15 @@
     </nav>
 
     <form id="form1" runat="server">
-        <asp:ListBox ID="lstCustomerContact" runat="server" SelectionMode="Single">
-        </asp:ListBox>
+
         
         
 
+        <asp:ListBox ID="lbCustomers" runat="server" AutoPostBack="True">
+            <asp:ListItem Value="Name, Phone, Email" Text=""></asp:ListItem>
+        </asp:ListBox>
+
+        
         <br />
         <br />
         <asp:Button ID="btnSelectMore" runat="server" Text="Select Additional Customers" CssClass="button"/>

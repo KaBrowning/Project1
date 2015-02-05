@@ -51,7 +51,7 @@
                     <br />
 
                     <label>Name: </label>
-                    <asp:Label ID="lblFirstName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
+                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
                     <br />
 
                     <label>Address: </label>
@@ -82,7 +82,7 @@
             <br/>
             <br/>
             <asp:Button ID="btnAddToContacts" runat="server" Text="Add to Contacts" CssClass="button" OnClick="btnAddToContacts_Click"/>
-            <asp:Button ID="btnViewList" runat="server" Text="View Contact List" CssClass="button"/>
+            <asp:Button ID="btnViewList" runat="server" Text="View Contact List" CssClass="button" OnClick="btnViewList_Click"/>
         </form>
     </div>
 </body>
