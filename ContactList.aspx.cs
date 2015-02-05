@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using App_Code;
 
 
@@ -13,8 +14,15 @@ public partial class ContactList : Page
 
         if (!IsPostBack)
         {
-            App_Code.CustomerList.GetCustomers();
+            return;
         }
+        //  this.lbCurrentCustomerList.Items.Add(new ListItem(App_Code.CustomerList.GetCustomers().ToString()));
+            Session["Customer"] = this.lbCurrentCustomerList;
+            foreach(ListItem customer in ((ListBox)(Session["Customer"])).Items)
+            {
+                this.lbCurrentCustomerList.Items.Add(new ListItem(Items.ToString(), Items.Values.ToString()));
+            }
+       
     }
 
     protected void btnClear_Click(object sender, EventArgs e)

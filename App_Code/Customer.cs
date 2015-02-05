@@ -25,7 +25,7 @@ namespace App_Code
         /// <value>
         /// The costumer identifier.
         /// </value>
-        public string CostumerId
+        public string CustumerId
         {
             get { return this._customerId; }
             set

@@ -22,12 +22,16 @@ public partial class CustomerList : Page
 
     protected void btnAddToContacts_Click(object sender, EventArgs e)
     {
-        App_Code.CustomerList customerList = new App_Code.CustomerList();
-        App_Code.Customer aCustomer = new App_Code.Customer();
+       // var customerList = new App_Code.CustomerList();
+      //  var aCustomer = new Customer()
+       // {
+        //   CustumerId = 
+       // }
+  
 
         //find a way to assign the customer to the ddl selected index value
 
-        customerList.AddItem(aCustomer);
+       // customerList.AddItem(aCustomer);
         this.lblSuccessfulAdd.Text = "Customer added successfully.";
     }
 

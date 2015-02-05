@@ -92,8 +92,8 @@ namespace App_Code
         /// <returns></returns>
         public static CustomerList GetCustomers()
         {
-            var cList = (CustomerList) HttpContext.Current.Session["Customer"];
-            if (cList == null)
+            var custList = (CustomerList) HttpContext.Current.Session["Customer"];
+            if (custList == null)
                 HttpContext.Current.Session["Customer"] = new CustomerList();
             return (CustomerList) HttpContext.Current.Session["Customer"];
         }

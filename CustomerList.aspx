@@ -47,7 +47,7 @@
             <asp:Repeater ID="dlCustomerInfo" runat="server" DataSourceID="SqlDataSourceSelectedItem">
                 <ItemTemplate>
                     <label>Customer ID: </label>
-                    <asp:Label ID="lblCustomerID" runat="server" Text='<%# Bind("CustomerID") %>'></asp:Label>
+                    <asp:Label ID="lblCustomerId" runat="server" Text='<%# Bind("CustomerID") %>'></asp:Label>
                     <br />
 
                     <label>Name: </label>
