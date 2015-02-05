@@ -11,7 +11,7 @@ namespace App_Code
     /// </summary>
     public class ContactList
     {
-        private CustomerList _customerList;
+        private readonly CustomerList _customerList;
 
         public ContactList()
         {
