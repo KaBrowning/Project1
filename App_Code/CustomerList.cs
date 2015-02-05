@@ -19,6 +19,16 @@ namespace App_Code
             this._customerList = new List<Customer>();
         }
 
+
+        /// <summary>
+        /// Counts this instance.
+        /// </summary>
+        /// <returns></returns>
+        public int Count()
+        {
+            return this._customerList.Count;
+        }
+
         public Customer this[int index]
         {
             get { return this._customerList[index]; }
@@ -45,7 +55,7 @@ namespace App_Code
               //  {
                     //if (aCustomer.Name == name)
                   //  {
-                   //     return aCustomer;
+                   //     return aCustomer;0
                   //  }
               //  }
                // return null;
@@ -54,13 +64,17 @@ namespace App_Code
             }
         }
 
+
         /// <summary>
-        /// Counts this instance.
+        /// Gets the list of customers that are stored in the session state.
         /// </summary>
         /// <returns></returns>
-        public int Count()
+        public static CustomerList GetCustomers()
         {
-            return this._customerList.Count;
+            var custList = (CustomerList)HttpContext.Current.Session["Customer"];
+            if (custList == null)
+                HttpContext.Current.Session["Customer"] = new CustomerList();
+            return (CustomerList)HttpContext.Current.Session["Customer"];
         }
 
         /// <summary>
@@ -88,18 +102,5 @@ namespace App_Code
         {
             this._customerList.Clear();
         }
-
-        /// <summary>
-        /// Gets the list of customers that are stored in the session state.
-        /// </summary>
-        /// <returns></returns>
-        public static CustomerList GetCustomers()
-        {
-            var custList = (CustomerList) HttpContext.Current.Session["Customer"];
-            if (custList == null)
-                HttpContext.Current.Session["Customer"] = new CustomerList();
-            return (CustomerList) HttpContext.Current.Session["Customer"];
-        }
-
     }
 }
