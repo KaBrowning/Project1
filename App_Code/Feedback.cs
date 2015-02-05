@@ -149,5 +149,10 @@ namespace App_Code
                 this._description = value;
             }
         }
+
+        public string FormatFeedback()
+        {
+            return "Feedback for software" + this._softwareId + " closed " + this._dateClosed + " (" + this._description + ")";
+        }
     }
 }
