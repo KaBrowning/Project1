@@ -22,8 +22,9 @@
 
     <form id="form1" runat="server">
 
-        
-        
+        <br/>
+       <label>Selected Customers:</label>
+        <br/>
 
         <asp:ListBox ID="lbCustomers" runat="server" AutoPostBack="True" CssClass="listbox">
             <asp:ListItem Value="Name, Phone, Email" Text=""></asp:ListItem>
