@@ -25,14 +25,14 @@
         
         
 
-        <asp:ListBox ID="lbCustomers" runat="server" AutoPostBack="True">
+        <asp:ListBox ID="lbCustomers" runat="server" AutoPostBack="True" CssClass="listbox">
             <asp:ListItem Value="Name, Phone, Email" Text=""></asp:ListItem>
         </asp:ListBox>
 
         
         <br />
         <br />
-        <asp:Button ID="btnSelectMore" runat="server" Text="Select Additional Customers" CssClass="button"/>
+        <asp:Button ID="btnSelectMore" runat="server" Text="Select Additional Customers" CssClass="button" OnClick="btnSelectMore_Click"/>
         <asp:Button ID="btnRemove" runat="server" Text="Remove Customer" CssClass="button" OnClick="btnRemove_Click"/>
         <asp:Button ID="btnClear" runat="server" Text="Clear List" OnClick="btnClear_Click" CssClass="button"/>
         
