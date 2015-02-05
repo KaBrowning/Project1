@@ -22,6 +22,12 @@ namespace App_Code
         private string _description;
 
 
+        /// <summary>
+        /// Gets or sets the feedback identifier.
+        /// </summary>
+        /// <value>
+        /// The feedback identifier.
+        /// </value>
         public string FeedbackId
         {
             get { return this._feedbackId; }
@@ -32,6 +38,12 @@ namespace App_Code
             }
         }
 
+        /// <summary>
+        /// Gets or sets the costumer identifier.
+        /// </summary>
+        /// <value>
+        /// The costumer identifier.
+        /// </value>
         public string CostumerId
         {
             get { return this._customerId; }
@@ -42,6 +54,12 @@ namespace App_Code
             }
         }
 
+        /// <summary>
+        /// Gets or sets the software identifier.
+        /// </summary>
+        /// <value>
+        /// The software identifier.
+        /// </value>
         public string SoftwareId
         {
             get { return this._softwareId; }
@@ -52,6 +70,12 @@ namespace App_Code
             }
         }
 
+        /// <summary>
+        /// Gets or sets the supported identifier.
+        /// </summary>
+        /// <value>
+        /// The supported identifier.
+        /// </value>
         public string SupportedId
         {
             get { return this._supportedId; }
@@ -62,6 +86,12 @@ namespace App_Code
             }
         }
 
+        /// <summary>
+        /// Gets or sets the date opened.
+        /// </summary>
+        /// <value>
+        /// The date opened.
+        /// </value>
         public string DateOpened
         {
             get { return this._dateOpened; }
@@ -72,6 +102,12 @@ namespace App_Code
             }
         }
 
+        /// <summary>
+        /// Gets or sets the date closed.
+        /// </summary>
+        /// <value>
+        /// The date closed.
+        /// </value>
         public string DateClosed
         {
             get { return this._dateClosed; }
@@ -82,6 +118,12 @@ namespace App_Code
             }
         }
 
+        /// <summary>
+        /// Gets or sets the title.
+        /// </summary>
+        /// <value>
+        /// The title.
+        /// </value>
         public string Title
         {
             get { return this._title; }
@@ -92,6 +134,12 @@ namespace App_Code
             }
         }
 
+        /// <summary>
+        /// Gets or sets the description.
+        /// </summary>
+        /// <value>
+        /// The description.
+        /// </value>
         public string Description
         {
             get { return this._description; }
