@@ -26,9 +26,8 @@
        <label>Selected Customers:</label>
         <br/>
 
-        <!--<asp:ListBox ID="lbCurrentCustomerList" runat="server" AutoPostBack="True" CssClass="listbox">
-            <asp:ListItem Value="Name, Phone, Email" Text=""></asp:ListItem>
-            </asp:ListBox>-->
+        <asp:ListBox ID="lbCurrentCustomerList" runat="server" AutoPostBack="True" CssClass="listbox">
+            </asp:ListBox>
 
         
         <br />
