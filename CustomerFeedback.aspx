@@ -20,18 +20,28 @@
         <a href ="CustomerFeedback.aspx">Feedback</a>
     </nav>
 
-    <form id="form1" runat="server">
-    
+    <form id="form1" runat="server" DefaultFocus="txtCustomerID">
+        
+        <asp:ValidationSummary ID="vsCustomerID" runat="server" />
+
         <h3>Tell Us of Your Experience</h3>
         <label>Customer ID: </label>
         <asp:TextBox ID="txtCustomerID" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="rfvCustomerID" runat="server" ErrorMessage="* indicates required field" Text="*" 
+            ControlToValidate="txtCustomerID"></asp:RequiredFieldValidator>
         <br/>
         <br />
-        <asp:Button ID="btnGoToFeedback" runat="server" Text="Start Feedback"/>
+        <asp:Button ID="btnGoToFeedback" runat="server" Text="Start Feedback" OnClick="btnGoToFeedback_Click"/>
         <br/>
         <br/>
         <br/>
-        
+
+        <asp:ListBox ID="lbFeedback" runat="server">
+            
+        </asp:ListBox>
+        <br/>
+        <br/>
+ 
         <label>How would you rate our service time?</label>
         <asp:RadioButtonList ID="rdoServiceTime" runat="server" RepeatDirection="Vertical" CssClass="rdoButtons">
             <asp:ListItem>Satisfied</asp:ListItem>

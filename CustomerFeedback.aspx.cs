@@ -11,4 +11,13 @@ public partial class CustomerFeedback : System.Web.UI.Page
     {
 
     }
+    protected void btnGoToFeedback_Click(object sender, EventArgs e)
+    {
+        if (!IsValid)
+        {
+            return;
+        }
+
+        this.lbFeedback.Focus();
+    }
 }
