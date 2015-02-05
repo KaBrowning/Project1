@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Web.UI;
+using App_Code;
+
 
 public partial class ContactList : Page
 {
@@ -11,7 +13,7 @@ public partial class ContactList : Page
 
         if (!IsPostBack)
         {
-            CustomerList.GetCustomers();
+            App_Code.CustomerList.GetCustomers();
         }
     }
 
@@ -21,7 +23,8 @@ public partial class ContactList : Page
         {
             return;
         }
-        this._customerList.Clear();
+        //this._customerList.Clear();
+        
     }
 
     protected void btnRemove_Click(object sender, EventArgs e)
