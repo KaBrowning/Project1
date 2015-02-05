@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Customer Feedback</title>
     <link href="Styles/CustomerListStyle.css" rel="stylesheet"/>
 </head>
 <body>
@@ -36,7 +36,7 @@
         <br/>
         <br/>
 
-        <asp:ListBox ID="lbFeedback" runat="server">
+        <asp:ListBox ID="lbFeedback" runat="server" CssClass="listbox">
             
         </asp:ListBox>
         <br/>
