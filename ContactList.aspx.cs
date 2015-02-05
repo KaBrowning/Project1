@@ -23,8 +23,8 @@ public partial class ContactList : Page
         {
             return;
         }
-        App_Code.CustomerList aCustomer = new CustomerList();
-        aCustomer.Clear();
+       // var aCustomer = new CustomerList();
+       // aCustomer.Clear();
     }
 
     protected void btnRemove_Click(object sender, EventArgs e)
