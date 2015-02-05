@@ -28,7 +28,63 @@
         <br/>
         <br />
         <asp:Button ID="btnGoToFeedback" runat="server" Text="Start Feedback"/>
-   
+        <br/>
+        <br/>
+        <br/>
+        
+        <label>How would you rate our service time?</label>
+        <asp:RadioButtonList ID="rdoServiceTime" runat="server" RepeatDirection="Vertical" CssClass="rdoButtons">
+            <asp:ListItem>Satisfied</asp:ListItem>
+            <asp:ListItem>Neither Satisfied Nor Dissatisfied</asp:ListItem>
+            <asp:ListItem>Dissatisfied</asp:ListItem>
+        </asp:RadioButtonList>
+        <br/>
+        <br/>
+
+        <label>How would you rate our technical efficiency?</label>
+        <asp:RadioButtonList ID="rdoTechEfficiency" runat="server" RepeatDirection="Vertical" CssClass="rdoButtons">
+            <asp:ListItem>Satisfied</asp:ListItem>
+            <asp:ListItem>Neither Satisfied Nor Dissatisfied</asp:ListItem>
+            <asp:ListItem>Dissatisfied</asp:ListItem>
+        </asp:RadioButtonList>
+        <br/>
+        <br/>
+        
+        <label>How would you rate our ability to resolve your problems?</label>
+        <asp:RadioButtonList ID="rblProbResolution" runat="server" RepeatDirection="Vertical" CssClass="rdoButtons">
+            <asp:ListItem>Satisfied</asp:ListItem>
+            <asp:ListItem>Neither Satisfied Nor Dissatisfied</asp:ListItem>
+            <asp:ListItem>Dissatisfied</asp:ListItem>
+        </asp:RadioButtonList>
+        <br/>
+        <br/>
+        
+        <label>Additional Comments:</label>
+        <br/>
+        <asp:TextBox ID="txtComments" runat="server" CssClass="txtbox" TextMode="MultiLine"></asp:TextBox>
+        <br/>
+        <br/>
+        
+        <label>Would you like to be contacted?</label>
+        <br/>
+        <asp:CheckBoxList ID="cblContact" runat="server" RepeatDirection="Horizontal" CssClass="rdoButtons">
+            <asp:ListItem>Yes</asp:ListItem>
+            <asp:ListItem>No</asp:ListItem>
+        </asp:CheckBoxList>
+        <br/>
+        <br/>
+        
+        <label>How would you like to be contacted?</label>
+        <asp:RadioButtonList ID="rblChooseContact" runat="server" RepeatDirection="Vertical" CssClass="rdoButtons">
+            <asp:ListItem>Phone</asp:ListItem>
+            <asp:ListItem>Email</asp:ListItem>
+        </asp:RadioButtonList>
+        <br/>
+        <br/>
+        <br/>
+        
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+
     </form>
     </div>
 </body>

@@ -63,4 +63,11 @@ h2 {
     color: green;
 }
 
+.rdoButtons {
+    font-size: 13px;
+}
 
+.txtbox {
+    width: 650px;
+    height: 150px;
+}
