@@ -83,6 +83,8 @@
             <br/>
             <asp:Button ID="btnAddToContacts" runat="server" Text="Add to Contacts" CssClass="button" OnClick="btnAddToContacts_Click"/>
             <asp:Button ID="btnViewList" runat="server" Text="View Contact List" CssClass="button" OnClick="btnViewList_Click"/>
+            <br/>
+            <asp:Label ID="lblSuccessfulAdd" runat="server"></asp:Label>
         </form>
     </div>
 </body>
