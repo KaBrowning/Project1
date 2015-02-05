@@ -20,15 +20,6 @@ namespace App_Code
         }
 
 
-        /// <summary>
-        /// Counts this instance.
-        /// </summary>
-        /// <returns></returns>
-        public int Count()
-        {
-            return this._customerList.Count;
-        }
-
         public Customer this[int index]
         {
             get { return this._customerList[index]; }
@@ -64,17 +55,13 @@ namespace App_Code
             }
         }
 
-
         /// <summary>
-        /// Gets the list of customers that are stored in the session state.
+        /// Counts this instance.
         /// </summary>
         /// <returns></returns>
-        public static CustomerList GetCustomers()
+        public int Count()
         {
-            var custList = (CustomerList)HttpContext.Current.Session["Customer"];
-            if (custList == null)
-                HttpContext.Current.Session["Customer"] = new CustomerList();
-            return (CustomerList)HttpContext.Current.Session["Customer"];
+            return this._customerList.Count;
         }
 
         /// <summary>
@@ -102,5 +89,20 @@ namespace App_Code
         {
             this._customerList.Clear();
         }
+
+        /// <summary>
+        /// Gets the list of customers that are stored in the session state.
+        /// </summary>
+        /// <returns></returns>
+        public static CustomerList GetCustomers()
+        {
+            var custList = (CustomerList)HttpContext.Current.Session["Customer"];
+            if (custList == null)
+                HttpContext.Current.Session["Customer"] = new CustomerList();
+            return (CustomerList)HttpContext.Current.Session["Customer"];
+        }
+
+
+
     }
 }
