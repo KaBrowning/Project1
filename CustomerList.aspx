@@ -79,8 +79,11 @@
                     
                 </ItemTemplate>
             </asp:Repeater>
-        </form>
+            <br/>
+            <br/>
+            <asp:Button ID="btnAddToContacts" runat="server" Text="Add to Contacts" />
 
+        </form>
     </div>
 </body>
 </html>
