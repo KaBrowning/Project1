@@ -47,35 +47,35 @@
             <asp:Repeater ID="dlCustomerInfo" runat="server" DataSourceID="SqlDataSourceSelectedItem">
                 <ItemTemplate>
                     <label>Customer ID: </label>
-                    <asp:Label ID="lblCustomerId" runat="server" Text='<%# Bind("CustomerID") %>'></asp:Label>
+                    <asp:Label ID="lblCustomerId" runat="server" Text='<%# this.Bind("CustomerID") %>'></asp:Label>
                     <br />
 
                     <label>Name: </label>
-                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
+                    <asp:Label ID="lblName" runat="server" Text='<%# this.Bind("Name") %>'></asp:Label>
                     <br />
 
                     <label>Address: </label>
-                    <asp:Label ID="lblAddress" runat="server" Text='<%# Bind("Address") %>'></asp:Label>
+                    <asp:Label ID="lblAddress" runat="server" Text='<%# this.Bind("Address") %>'></asp:Label>
                     <br />
 
                     <label>City: </label>
-                    <asp:Label ID="lblCity" runat="server" Text='<%# Bind("City") %>'></asp:Label>
+                    <asp:Label ID="lblCity" runat="server" Text='<%# this.Bind("City") %>'></asp:Label>
                     <br />
 
                     <label>State: </label>
-                    <asp:Label ID="lblState" runat="server" Text='<%# Bind("State") %>'></asp:Label>
+                    <asp:Label ID="lblState" runat="server" Text='<%# this.Bind("State") %>'></asp:Label>
                     <br />
 
                     <label>Zipcode: </label>
-                    <asp:Label ID="lblZipcode" runat="server" Text='<%# Bind("Zipcode") %>'></asp:Label>
+                    <asp:Label ID="lblZipcode" runat="server" Text='<%# this.Bind("Zipcode") %>'></asp:Label>
                     <br />
 
                     <label>Phone: </label>
-                    <asp:Label ID="lblPhone" runat="server" Text='<%# Bind("Phone") %>'></asp:Label>
+                    <asp:Label ID="lblPhone" runat="server" Text='<%# this.Bind("Phone") %>'></asp:Label>
                     <br />
 
                     <label>Email: </label>
-                    <asp:Label ID="lblEmail" runat="server" Text='<%# Bind("Email") %>'></asp:Label>
+                    <asp:Label ID="lblEmail" runat="server" Text='<%# this.Bind("Email") %>'></asp:Label>
                     
                 </ItemTemplate>
             </asp:Repeater>

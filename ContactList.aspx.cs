@@ -3,14 +3,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using App_Code;
 
-
 public partial class ContactList : Page
 {
-    private App_Code.CustomerList _customerList;
+    private CustomerList _customerList;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        this._customerList = new App_Code.CustomerList();
+        this._customerList = new CustomerList();
 
         if (!IsPostBack)
         {
