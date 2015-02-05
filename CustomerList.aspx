@@ -81,8 +81,8 @@
             </asp:Repeater>
             <br/>
             <br/>
-            <asp:Button ID="btnAddToContacts" runat="server" Text="Add to Contacts" CssClass="button"/>
-
+            <asp:Button ID="btnAddToContacts" runat="server" Text="Add to Contacts" CssClass="button" OnClick="btnAddToContacts_Click"/>
+            <asp:Button ID="btnViewList" runat="server" Text="View Contact List" CssClass="button"/>
         </form>
     </div>
 </body>
