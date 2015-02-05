@@ -34,4 +34,8 @@ public partial class ContactList : Page
             return;
         }
     }
+    protected void btnSelectMore_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CustomerList.aspx");
+    }
 }
