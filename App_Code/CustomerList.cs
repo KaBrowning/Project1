@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Web;
 
 namespace App_Code
@@ -40,14 +41,16 @@ namespace App_Code
         {
             get
             {
-                foreach (var aCustomer in this._customerList)
-                {
-                    if (aCustomer.Name == name)
-                    {
-                        return aCustomer;
-                    }
-                }
-                return null;
+                //foreach (var aCustomer in this._customerList)
+              //  {
+                    //if (aCustomer.Name == name)
+                  //  {
+                   //     return aCustomer;
+                  //  }
+              //  }
+               // return null;
+
+                return this._customerList.FirstOrDefault(c => c.CustumerId == name);
             }
         }
 

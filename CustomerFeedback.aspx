@@ -22,6 +22,12 @@
 
     <form id="form1" runat="server">
     
+        <h3>Tell Us of Your Experience</h3>
+        <label>Customer ID: </label>
+        <asp:TextBox ID="txtCustomerID" runat="server"></asp:TextBox>
+        <br/>
+        <br />
+        <asp:Button ID="btnGoToFeedback" runat="server" Text="Start Feedback"/>
    
     </form>
     </div>
